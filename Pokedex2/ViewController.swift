@@ -21,6 +21,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     override func viewDidLoad() {
         super.viewDidLoad()
+      
         collection.delegate = self
         collection.dataSource = self
         searchBar.delegate = self
@@ -57,7 +58,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 
             }
             
-            print (rows)
+            //print (rows)
         } catch  let err as NSError {
             print(err.debugDescription)
         }
@@ -92,7 +93,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         } else {
             poke = pokemon[indexPath.row]
         }
-        
+
         performSegueWithIdentifier("PokemonDetailVC", sender: poke)
         
     }
